@@ -12,6 +12,8 @@ describe('enhancer.js', () => {
     describe('succeed()', () => {
         it('increases items enhancement + 1', () => {
             expect(succeed({enhancement: 5}).enhancement).toBe(6);
+            expect(succeed({enhancement: 20}).enhancement).toBe(20);
+            expect(succeed({enhancement: 19}).enhancement).toBe(20);
         });
     });
 });

@@ -5,7 +5,12 @@ module.exports = {
 };
 
 function succeed(item) {
-  return { ...item, enhancement: item.enhancement + 1 };
+  if (item.enhancement < 20) {
+    return { ...item, enhancement: item.enhancement + 1 };
+  } else {
+    return { ...item}
+  }
+
 }
 
 function fail(item) {
