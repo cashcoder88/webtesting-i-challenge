@@ -5,7 +5,7 @@ module.exports = {
 };
 
 function succeed(item) {
-  return { ...item };
+  return { ...item, enhancement: item.enhancement + 1 };
 }
 
 function fail(item) {
